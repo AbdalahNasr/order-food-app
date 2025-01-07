@@ -1,0 +1,41 @@
+{
+    "logo": "Ramen",
+    "home": {
+      "hero": {
+        "title": "A Bowl of Happiness",
+        "description": "Craving ramen? We've got you covered with authentic flavors, fresh ingredients, and fast delivery. Enjoy a unique ramen experience, just a click away. Your perfect bowl awaits!",
+        "orderNow": "Order Now",
+        "learnMore": "Learn More"
+      },
+      "bestSeller": {
+        "checkOut": "Check Out",
+        "OurBestSellers": "Our Best Sellers"
+      },
+      "about": {
+        "ourStory": "Our Story",
+        "aboutUs": "About Us",
+        "descriptions": {
+          "one": "Welcome to our ramen world, where we serve bowls filled with authentic flavors. Every bowl is crafted with care, from the rich broth to the fresh noodles, creating an unforgettable experience.",
+          "two": "Our passion for ramen shines through in every bowl. Using the finest local and imported ingredients, we follow traditional techniques to ensure every bite is delicious and satisfying.",
+          "three": "Join us on a journey of Japanese flavors and enjoy an exceptional ramen experience. We are dedicated to quality and service to make every meal truly unique. Come and taste the difference!"
+        }
+      },
+      "contact": {
+        "Don'tHesitate": "Don't Hesitate",
+        "contactUs": "Contact Us"
+      }
+    },
+    "navbar": {
+      "home": "Home",
+      "about": "About Us",
+      "menu": "Menu",
+      "contact": "Contact Us",
+      "login": "Login"
+    },
+    "menuItem": {
+      "addToCart": "Add to Cart"
+    },
+    "copyRight": "© 2024 All Rights Reserved",
+    "noProductsFound": "No Products Found"
+  }
+  
