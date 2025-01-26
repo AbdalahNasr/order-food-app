@@ -2,10 +2,12 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import ReduxProvider from '@/providers/ReduxProvider';
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Cairo, Roboto } from 'next/font/google';
 import { Locale } from '@/i18n.config';
 import './globals.css';
 import { Directions, Languages } from '@/components/constants/enum';
+import { Toaster } from '@/components/ui/toaster';
+import NextAuthSessionProvider from '@/providers/NextAuthSessionProvider';
 
 export async function generateStaticParams() {
   return [{ locale: Languages.ARABIC }, { locale: Languages.ENGLISH }];
@@ -14,6 +16,11 @@ export async function generateStaticParams() {
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
+  preload: true,
+});
+const cairo = Cairo({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
   preload: true,
 });
 
@@ -36,12 +43,18 @@ export default async function RootLayout({
       lang={locale}
       dir={locale === Languages.ARABIC ? Directions.RTL : Directions.LTR}
     >
-      <body className={roboto.className}>
+      <body  className={
+          locale === Languages.ARABIC ? cairo.className : roboto.className
+        }>
+          <NextAuthSessionProvider>
+
         <ReduxProvider>
           <Header />
           {children}
           <Footer />
+          <Toaster/>
         </ReduxProvider>
+          </NextAuthSessionProvider>
       </body>
     </html>
   );

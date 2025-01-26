@@ -2,7 +2,7 @@ import { formatCurrency } from '@/lib/formatters'
 import Image from 'next/image'
 import React from 'react'
 import AddToCartButton from './AddToCartButton'
-import { ProductWithRelations } from '../Types/product'
+import { ProductWithRelations } from '../../Types/product'
 
 function MenuItem({item}:{item:ProductWithRelations}) {
   return (

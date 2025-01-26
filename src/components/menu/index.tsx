@@ -1,5 +1,5 @@
 import MenuItem from "./MenuItem"
-import { ProductWithRelations } from "../Types/product"
+import { ProductWithRelations } from "../../Types/product"
 import getCurrentLocale from "@/lib/getCurrentLocale";
 import getTrans from "@/lib/translation";
 // disable next line @type script eslint/no-explicit-any

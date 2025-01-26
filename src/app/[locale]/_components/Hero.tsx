@@ -50,8 +50,8 @@ console.log(locale);
       </div>
       <div className='relative hidden md:block'>
         <Image
-          src='/assets/Ramen.jpg'
-          alt='Ramen'
+src="/public/assets/images/Ramen.jpg"
+alt='Ramen'
           fill
           className='object-contain'
           loading='eager'
