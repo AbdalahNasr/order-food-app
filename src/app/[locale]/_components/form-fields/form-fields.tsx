@@ -21,11 +21,11 @@ const FormFields = (props: Props) => {
     }
 
     if (type === InputTypes.CHECKBOX) {
+      // Remove duplicate name prop, spread props only
       return (
         <Checkbox
           checked={false}
           label={props.label ?? ""}
-          name={props.name}
           {...props}
         />
       );
