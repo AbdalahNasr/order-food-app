@@ -49,7 +49,7 @@ console.log(locale);
       </div>
       <div className='relative hidden md:block'>
         <img
-          src="/assets/images/spicy_ramen.jpg"
+          src="/assets/images/Ramen.jpg"
           alt="Ramen"
           style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
         />

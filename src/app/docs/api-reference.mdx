@@ -1,0 +1,75 @@
+# API Reference
+
+## Authentication
+
+### POST `/api/auth/login`
+- **Description:** Log in a user.
+- **Body:**
+  - `email` (string, required)
+  - `password` (string, required)
+- **Response:**
+  - 200: User session info
+  - 401: Invalid credentials
+
+### POST `/api/auth/register`
+- **Description:** Register a new user.
+- **Body:**
+  - `email` (string, required)
+  - `password` (string, required)
+  - `name` (string, required)
+- **Response:**
+  - 201: User created
+  - 400: Validation error
+
+---
+
+## Menu
+
+### GET `/api/menu`
+- **Description:** Get all menu items.
+- **Response:**
+  - 200: Array of menu items
+
+### GET `/api/menu/[id]`
+- **Description:** Get a single menu item by ID.
+- **Response:**
+  - 200: Menu item object
+  - 404: Not found
+
+---
+
+## Cart
+
+### POST `/api/cart/add`
+- **Description:** Add item to cart.
+- **Body:**
+  - `productId` (string, required)
+  - `quantity` (number, required)
+- **Response:**
+  - 200: Updated cart
+
+### GET `/api/cart`
+- **Description:** Get current user's cart.
+- **Response:**
+  - 200: Cart object
+
+---
+
+## Orders
+
+### POST `/api/orders`
+- **Description:** Place a new order.
+- **Body:**
+  - `cartId` (string, required)
+  - `address` (string, required)
+- **Response:**
+  - 201: Order created
+
+### GET `/api/orders`
+- **Description:** Get current user's orders.
+- **Response:**
+  - 200: Array of orders
+
+---
+
+For more details, see the source code in `/src/app/api/`.
