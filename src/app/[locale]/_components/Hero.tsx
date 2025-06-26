@@ -4,7 +4,6 @@ import { buttonVariants } from '@/components/ui/button'
 import getCurrentLocale from '@/lib/getCurrentLocale'
 import getTrans from '@/lib/translation'
 import { ArrowRightCircle } from 'lucide-react'
-import Image from 'next/image'
 import React from 'react'
 
 async function Hero() {
@@ -49,13 +48,10 @@ console.log(locale);
         </div>
       </div>
       <div className='relative hidden md:block'>
-        <Image
-src="/public/assets/images/Ramen.jpg"
-alt='Ramen'
-          fill
-          className='object-contain'
-          loading='eager'
-          priority
+        <img
+          src="/assets/images/spicy_ramen.jpg"
+          alt="Ramen"
+          style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
         />
       </div>
     </div>

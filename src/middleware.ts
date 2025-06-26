@@ -93,31 +93,9 @@ export default withAuth(
   }
 );
 
-
-export async function middleware(req: NextRequest) {
-
-  const requestHeaders = new Headers(req.headers)
-requestHeaders.set('x-url',req.url);
-const pathname= req.nextUrl.pathname ;
-
-const pathnameIsMissingLocale = i18n.locales.every(
-  (locale) => !pathname.startsWith(`/${locale}`)
-);
- // Redirect if there is no locale
- if (pathnameIsMissingLocale) {
-  const locale = getLocale(req);
-  return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url));
-}
-  return NextResponse.next({
-    request:{
-      headers:requestHeaders,
-    },
-  });
-}
-
 export const config ={
    // Matcher ignoring `/_next/`, `/api/`, ..etc
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|assets).*)',
   ],
 }
